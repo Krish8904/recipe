@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #fffaf5;
+  color: #222;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+}
+
+.container {
+  max-width: 1100px;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  color: #bfa046;
+  margin-bottom: 1.5rem;
+}
+
+.search-bar {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.search-bar input {
+  width: 60%;
+  padding: 0.7rem 1rem;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border 0.3s;
+}
+
+.search-bar input:focus {
+  outline: none;
+  border-color: #bfa046;
+}
+
+.form {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.7rem;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+button {
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #bfa046;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+button:hover {
+  background-color: #a88f3e;
+}
+
+.section-title {
+  margin-top: 2rem;
+  font-size: 1.4rem;
+  color: #bfa046;
+}
+
+.recipe-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.2s;
+  text-align: center;
+  padding-bottom: 0.5rem;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.card h3 {
+  padding: 0.5rem;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Modal styling */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.close {
+  float: right;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.modal img {
+  width: 100%;
+  border-radius: 10px;
+  margin: 1rem 0;
+}
